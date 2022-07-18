@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .a > li{
+      display: inline-block;/*指定对象为行内块元素 */
+      position: relative;/*相对定位 */
+    }
+    .a li{
+      position: relative;/*相对定位 */
+      white-space: nowrap;/*设定文字不折行 */
+    }
+     .a ul{
+      position: absolute;/*绝对定位*/
+      left: 0;
+      top: 100%;
+      display: none;/*隐藏对象*/
+     }
+     .a li:hover > ul{
+      display: block;/*指定对象为块元素*/
+     }
+     /*选中第三层及更深层的ul */
+     .a ul ul {
+      left: 100%;
+      top: 0;
+     }
+     .a,
+      .a ul{
+      background-color:rgb(60,60,60);
+      color: #c4c4c4;
+     }
+     .a li:hover{
+      background-color:aqua;
+     }
+     .a ul li {
+      padding: 0 100px 0 10px;
+     }
+     .a li > hr{
+      margin-left: -10px;
+      margin-right: -100px;
+     }
+     .a li li >span{
+      position:absolute;
+      right: 5px;
+      top: 0;
+     }
+
+
+
+  </style>
+</head>
+<body>
+<ul class="a">
+<li>文件
+  <ul>
+    <li>新建文本文件 <span>ctrl+n</span></li>
+    <li><hr></li>
+    <li>新建文本</li>
+    <li>新建窗口</li>
+    <li>打开文件 <span>ctrl+o</span></li>
+    <li>打开文件夹</li>
+    <li>从文件打开工作区</li>
+    <li>打开最近文件
+      <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+        <li>e</li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<li>编辑
+  <ul>
+    <li>撤销</li>
+    <li><hr></li>
+    <li>恢复</li>
+    <li>剪切</li>
+    <li>复制</li>
+    <li>粘贴</li>
+  </ul>
+</li>
+<li>选择
+  <ul>
+    <li>全选</li>
+    <li><hr></li>
+    <li>扩大选区</li>
+    <li>缩小选区</li>
+    <li>向上复制一行</li>
+    <li>向下复制一行</li>
+  </ul>
+</li>
+<li>查看
+  <ul>
+    <li>命令面板</li>
+    <li><hr></li>
+    <li>打开视图</li>
+    <li>外观</li>
+    <li>编辑器布局</li>
+    <li>资源管理器</li>
+  </ul>
+</li>
+</ul>
+</body>
+</html>
