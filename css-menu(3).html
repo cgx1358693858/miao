@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html{
+      height: 100%;
+    }
+    body{
+      margin: 0;
+      height: 100%;
+    }
+    header{
+      box-sizing: border-box;
+      border: 1px solid;
+      height: 100px;
+      background-color: rgb(71, 225, 225);
+    }
+    div{
+      height: calc(100% - 100px) ;
+      box-sizing: border-box;
+      border: 1px solid;
+    }
+    aside{
+      display: inline-block;
+      width: 150px;
+      height: 100%;
+      box-sizing: border-box;
+      border: 1px solid;
+      vertical-align: top;
+      background-color: rgb(72, 163, 133);
+    }
+    main{
+      display: inline-block;
+      width: calc(100% - 150px);
+      height: 100%;
+      box-sizing: border-box;
+      border: 1px solid;
+      vertical-align: top;
+      background-color:cadetblue;
+    }
+  </style>
+</head>
+<body>
+  <header></header>
+  <div>
+    <aside></aside><main></main>
+  </div>
+</body>
+</html>
