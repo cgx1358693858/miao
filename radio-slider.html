@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .imgs {
+      position: relative;
+      width: 400px;
+      height: 300px;
+    }
+    .imgs img{
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transform: 1s;
+      position: absolute;
+    }
+    section{
+
+      position: relative;
+    }
+    section input{
+      position: relative;
+      top: 300px;
+      z-index: 8;
+      display: none;
+    }
+    .indicators{
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      z-index: 8;
+    }
+    .indicators label{
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color:gray;
+      cursor: pointer;
+    }
+    .indicators label:hover {
+      background-color:green;
+    }
+    input:nth-child(1):checked ~ .imgs img:nth-child(1),
+    input:nth-child(2):checked ~ .imgs img:nth-child(2),
+    input:nth-child(3):checked ~ .imgs img:nth-child(3),
+    input:nth-child(4):checked ~ .imgs img:nth-child(4)
+     {
+  opacity: 1;
+  }
+</style>
+</head>
+<body>
+  <section>
+  <input type="radio" id="r1-1" name="radio1">
+  <input type="radio" id="r1-2" name="radio1">
+  <input type="radio" id="r1-3" name="radio1">
+  <input type="radio" id="r1-4" name="radio1">
+  <div class="imgs">
+    <img src="https://img.zcool.cn/community/01193959eeec64a801202b0c23804b.jpg@1280w_1l_2o_100sh.jpg" alt="">
+    <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.fioTTGr0zW16ZEDRLwaJwAHaEo?pid=ImgDet&rs=1" alt="">
+    <img src="https://ts1.cn.mm.bing.net/th/id/R-C.857cd108f54234621536a7d8755afa19?rik=30dEIRuuSjrABg&riu=http%3a%2f%2fimg.ewebweb.com%2fuploads%2f20190730%2f21%2f1564494530-khIOUPVBKJ.jpg&ehk=piRNqRCyUdkjj1knvfqtyyICq%2foqaQlebAuF0KBHdWY%3d&risl=&pid=ImgRaw&r=0" alt="">
+    <img src="https://img.zcool.cn/community/01088b5a052431a801204a0e253198.jpg@1280w_1l_2o_100sh.jpg" alt="">
+  </div>
+  <div class="indicators">
+    <label for="r1-1"></label>
+    <label for="r1-2"></label>
+    <label for="r1-3"></label>
+    <label for="r1-4"></label>
+  </div>
+</section>
+</body>
+</html>
