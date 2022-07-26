@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span{
+      display: inline-block;
+      width: 100px;
+      transition: 1s;
+      font-size: 10px;
+      position: relative;
+      text-indent: -99999px;
+      background-color: aqua;
+      height: 50px;
+    }
+    span:hover{
+      font-size: 24px;
+   }
+   span::after{
+    content: attr(data-content);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-indent: 0;
+   }
+   table{
+    border-spacing: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+   }
+   tr,col{
+    border: 3px solid blue;
+   }
+   td {
+    width: 50px;
+    height: 50px;
+  }
+  td:hover{
+  border:3px solid red
+ }
+ ul{
+  list-style: none;
+  padding: 0;
+  width: 170px;
+  margin: auto;
+  overflow: hidden;
+  padding-bottom: 5px;
+}
+ul li{
+  width: 50px;
+  height: 50px;
+  border: 5px solid blue;
+  float: left;
+  margin: 0 -5px -5px 0;
+  position: relative;
+}
+ul li:hover{
+  border: 5px solid red;
+  z-index: 8;
+}
+section{
+  display: flex;
+  flex-flow: wrap;
+  width: 170px;
+
+}
+section div{
+   width: 50px;
+   height: 50px;
+   border: 5px solid blue;
+   margin:0 -5px -5px 0;
+   position: relative;
+}
+section div:hover{
+   border: 5px solid red;
+   z-index: 8;
+}
+
+  </style>
+</head>
+<body>
+<table>
+  <col>
+  <col>
+  <col>
+  <tbody>
+   <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+   </tr>
+   <tr>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+   </tr>
+   <tr>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+   </tr>
+  </tbody>
+</table>
+<section>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</section>
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<span data-content="订阅博客">订阅博客</span>
+</body>
+</html>
